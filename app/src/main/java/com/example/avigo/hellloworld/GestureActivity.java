@@ -1,5 +1,6 @@
 package com.example.avigo.hellloworld;
 
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -13,22 +14,23 @@ public class GestureActivity extends AppCompatActivity implements GestureDetecto
 GestureDetector.OnDoubleTapListener{
 
     private TextView textView;
-    private GestureDetector gestureDetector;
+    private GestureDetectorCompat gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gesture);
         textView=(TextView) findViewById(R.id.tvResultGesture);
+        this.gestureDetector= new GestureDetectorCompat(this,this);
     }
 
     public void buttonClick(View view){
         switch (view.getId()){
             case R.id.btnClickMe:
-                textView.setText("you clicked the 1st button");
+                textView.setText("you clicked the button");
                 break;
             case R.id.btnClickMe2:
-                textView.setText("you pressed the 2nd button");
+                textView.setText("you pressed the button");
                 break;
         }
     }
@@ -85,9 +87,11 @@ GestureDetector.OnDoubleTapListener{
         return true;
     }
 
-
-
-
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.gestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
