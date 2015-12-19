@@ -126,6 +126,10 @@
             android:name=".VideoPlayerActivity"
             android:label="@string/title_activity_video_player" >
         </activity>
+        <activity
+            android:name=".GestureActivity"
+            android:label="@string/title_activity_gesture" >
+        </activity>
     </application>
 
 </manifest>

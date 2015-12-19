@@ -87,6 +87,10 @@ public class WindowsActivity extends AppCompatActivity {
                 Intent videoPlayerIntent= new Intent(getBaseContext(),VideoPlayerActivity.class);
                 startActivity(videoPlayerIntent);
                 break;
+            case R.id.ibGesture:
+                Intent gestureIntent= new Intent(getBaseContext(),GestureActivity.class);
+                startActivity(gestureIntent);
+                break;
         }
     }
 
