@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.avigo.hellloworld.ImageProcesActivity">
+
+    <ImageView
+        android:src="@drawable/musicb"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:id="@+id/ivDefault"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitXY" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/ivDefault"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:onClick="imageEffects"
+                android:background="#808080"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/btnGreyscale" />
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/btnSepia"
+                android:onClick="imageEffects"
+                android:background="#ffce90" />
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/btnInvert"
+                android:onClick="imageEffects" />
+
+            <ImageButton
+
+                android:src="@drawable/gallery"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/ibOpenGallery" />
+
+            <ImageButton
+                android:onClick="getImageFromCamera"
+                android:src="@drawable/camera"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/ibOpenCam"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+</RelativeLayout>

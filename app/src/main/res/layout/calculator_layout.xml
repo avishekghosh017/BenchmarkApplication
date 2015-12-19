@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#262626">
+
+    <TextView
+        android:textColor="#ffffff"
+        android:textSize="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Basic Calculator"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <EditText
+        android:textColorHint="#ffffff"
+        android:textSize="30dp"
+        android:hint="Enter first number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etFirstNum"
+        android:layout_gravity="center_horizontal"
+        android:background="#33cc33"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
+    <EditText
+        android:textColorHint="#ffffff"
+        android:textSize="30dp"
+        android:hint="Enter second number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etSecondNum"
+        android:layout_gravity="center_horizontal"
+        android:background="#33cc33"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:textSize="20dp"
+            android:onClick="doCalculation"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/btnAdd"
+            android:background="#36ff22" />
+
+        <Button
+            android:textSize="20dp"
+            android:onClick="doCalculation"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/btnSub"
+            android:background="#22f8ff" />
+
+        <Button
+            android:textSize="20dp"
+            android:onClick="doCalculation"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:id="@+id/btnMul"
+            android:background="#32ff22" />
+
+        <Button
+            android:textSize="20dp"
+            android:onClick="doCalculation"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/btnDiv"
+            android:background="#19ffec" />
+
+        <Button
+            android:textSize="20dp"
+            android:onClick="doCalculation"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:id="@+id/btnMod"
+            android:background="#50ff31" />
+    </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result will be displayed here"
+        android:id="@+id/tvResult"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/holo_orange_light"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+</LinearLayout>

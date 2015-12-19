@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:onClick="selectAudio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:text="Select a song to play" />
+
+    <ImageView
+        android:src="@drawable/musicb"
+        android:layout_width="match_parent"
+        android:layout_height="384dp"
+        android:id="@+id/imvMusic"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:scaleType="fitXY" />
+
+    <SeekBar
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:progress="20" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+        <ImageButton
+            android:onClick="nextPrevious"
+            android:src="@drawable/previousplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibPrevious"
+            android:layout_gravity="left"
+            android:foregroundGravity="left"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:onClick="changePlayPause"
+            android:src="@drawable/play"
+            android:layout_width="141dp"
+            android:layout_height="match_parent"
+            android:id="@+id/ibPlayPause"
+            android:layout_weight="0.75"
+            android:layout_gravity="center"
+            android:foregroundGravity="center_vertical|center_horizontal"
+            android:tag="off"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:onClick="nextPrevious"
+            android:src="@drawable/nextplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibNext"
+            android:layout_gravity="right"
+            android:foregroundGravity="right"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+</LinearLayout>

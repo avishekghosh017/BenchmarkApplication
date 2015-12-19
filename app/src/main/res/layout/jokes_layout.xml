@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/appbackground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOKES"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50dp"
+        android:textColor="#010101"
+        android:paddingBottom="100dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:onClick="changeJokes"
+            android:layout_weight="1"
+            android:src="@drawable/previous"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:id="@+id/ibPrevious" />
+
+        <TextView
+            android:layout_weight="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:id="@+id/tvJokes"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="#010101"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <ImageButton
+            android:onClick="changeJokes"
+            android:layout_weight="1"
+            android:src="@drawable/next"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:id="@+id/ibNext" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="page no"
+        android:id="@+id/tvPageNo"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textColor="#010101"
+        android:paddingTop="75dp" />
+
+</LinearLayout>

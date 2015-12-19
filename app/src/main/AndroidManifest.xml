@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.avigo.hellloworld" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:label="flashlight"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+        </activity>
+        <activity android:name=".ImageProcesActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ContextMenuActivity" >
+        </activity>
+        <activity android:name=".SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WindowsActivity" >
+        </activity>
+        <activity android:name=".MenusDemoActivity" >
+        </activity>
+        <activity android:name=".BasicCalculatorActivity" >
+        </activity>
+        <activity android:name=".GreetUserActivity" >
+        </activity>
+        <activity android:name=".JokesActivity" >
+        </activity>
+        <activity android:name=".MediaControllerActivity" >
+        </activity>
+        <activity android:name=".WebViewActivity" >
+        </activity>
+        <activity android:name=".BenchmarkActivity" >
+        </activity>
+        <activity android:name=".NewsActivity" >
+        </activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification" >
+        </activity>
+        <activity
+            android:name=".NewsDemoActivity"
+            android:label="@string/title_activity_news_demo" >
+        </activity>
+        <activity
+            android:name=".FlashLightActivity"
+            android:label="@string/title_activity_flash_light" >
+        </activity>
+        <activity
+            android:name=".SendSMSActivity"
+            android:label="@string/title_activity_send_sms" >
+        </activity>
+
+        <service
+            android:name=".BootService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <receiver
+            android:name=".MessageReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ForResultActivity"
+            android:label="@string/title_activity_for_result" >
+        </activity>
+        <activity
+            android:name=".ForResultActivity2"
+            android:label="@string/title_activity_for_result2" >
+        </activity>
+        <activity
+            android:name=".AudioPlayerActivity"
+            android:label="@string/title_activity_audio_player" >
+        </activity>
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:label="@string/title_activity_video_player" >
+        </activity>
+    </application>
+
+</manifest>

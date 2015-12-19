@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:textAlignment="center"
+    android:paddingLeft="5dp"
+    android:background="#666666">
+
+    <EditText
+
+        android:textAlignment="gravity"
+        android:hint="Enter Array Size"
+        android:textColorHint="#50ff31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etSize"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgCase">
+
+        <RadioButton
+        android:textColor="#50ff31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Case"
+        android:id="@+id/rbBest"
+        android:checked="false" />
+
+    <RadioButton
+        android:textColor="#50ff31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avg Case"
+        android:id="@+id/rbAvg"
+        android:checked="true" />
+
+    <RadioButton
+        android:textColor="#50ff31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Worst Case"
+        android:id="@+id/rbWorst"
+        android:checked="false" />
+    </RadioGroup>
+
+    <Button
+        android:onClick="generateArray"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Generate Array"
+        android:id="@+id/btnArray"
+        android:layout_gravity="center_horizontal"
+         />
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="6"
+        android:columnCount="2"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textColor="#50ff31"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Algorithm"
+            android:id="@+id/tvAlgo" />
+
+        <TextView
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textColor="#50ff31"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:id="@+id/tvStatus"
+            android:layout_gravity="right" />
+
+
+    <Button
+        android:onClick="generateCase"
+        android:layout_row="1"
+        android:layout_column="0"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Bubble Sort"
+        android:id="@+id/btnBubble" />
+
+        <TextView
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="timestamp"
+            android:layout_gravity="right"
+            android:id="@+id/tvBubble" />
+
+    <Button
+        android:onClick="generateCase"
+        android:layout_column="0"
+        android:layout_row="2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Quick Sort"
+        android:id="@+id/btnQuick" />
+
+
+        <TextView
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="timestamp"
+            android:layout_gravity="right"
+            android:id="@+id/tvQuick" />
+
+
+        <Button
+            android:onClick="generateCase"
+        android:layout_row="3"
+        android:layout_column="0"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Selection Sort"
+        android:id="@+id/btnSelection" />
+
+
+        <TextView
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="timestamp"
+            android:layout_gravity="right"
+            android:id="@+id/tvSelection" />
+
+
+        <Button
+            android:onClick="generateCase"
+        android:layout_row="4"
+        android:layout_column="0"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Insertion Sort"
+        android:id="@+id/btnInsert" />
+
+
+        <TextView
+            android:layout_column="1"
+            android:layout_row="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="timestamp"
+            android:layout_gravity="right"
+            android:id="@+id/tvInsertion" />
+
+
+        <Button
+            android:onClick="generateCase"
+        android:layout_row="5"
+        android:layout_column="0"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Merge Sort"
+        android:id="@+id/btnMerge" />
+
+
+        <TextView
+            android:layout_column="1"
+            android:layout_row="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="timestamp"
+            android:layout_gravity="right"
+            android:id="@+id/tvMerge" />
+
+    </GridLayout>
+
+    <Button
+        android:onClick="benchMarker"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Benchmark All"
+        android:id="@+id/btnBenchmark"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
