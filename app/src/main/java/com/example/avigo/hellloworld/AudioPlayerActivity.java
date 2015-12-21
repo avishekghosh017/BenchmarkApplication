@@ -34,7 +34,7 @@ public class AudioPlayerActivity extends AppCompatActivity {
                 Toast.makeText(this, "Select Audio File First !!", Toast.LENGTH_LONG).show();
             }
         }catch (Exception e){
-
+            e.printStackTrace();
         }
     }
 
@@ -45,13 +45,13 @@ public class AudioPlayerActivity extends AppCompatActivity {
             else
                 Toast.makeText(this, "Play a Song First!!! ", Toast.LENGTH_LONG).show();
         }catch (Exception e){
-
+            e.printStackTrace();
         }
     }
     public void selectAudio(View view){
         Intent intentSelectAudion = new Intent(Intent.ACTION_GET_CONTENT);
         intentSelectAudion.setType("file/*");
-        startActivityForResult(intentSelectAudion, 1);
+        startActivityForResult(intentSelectAudion, 123);
     }
 
     @Override
