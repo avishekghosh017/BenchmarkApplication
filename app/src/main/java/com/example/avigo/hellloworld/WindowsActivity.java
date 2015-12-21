@@ -91,6 +91,10 @@ public class WindowsActivity extends AppCompatActivity {
                 Intent gestureIntent= new Intent(getBaseContext(),GestureActivity.class);
                 startActivity(gestureIntent);
                 break;
+            case R.id.ibSensor:
+                Intent sensorIntent= new Intent(getBaseContext(),SensorListActivity.class);
+                startActivity(sensorIntent);
+                break;
         }
     }
 

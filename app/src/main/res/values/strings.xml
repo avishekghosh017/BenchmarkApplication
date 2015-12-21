@@ -14,4 +14,5 @@
     <string name="title_activity_audio_player">AudioPlayerActivity</string>
     <string name="title_activity_video_player">VideoPlayerActivity</string>
     <string name="title_activity_gesture">GestureActivity</string>
+    <string name="title_activity_sensor_list">SensorListActivity</string>
 </resources>

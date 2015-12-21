@@ -130,6 +130,10 @@
             android:name=".GestureActivity"
             android:label="@string/title_activity_gesture" >
         </activity>
+        <activity
+            android:name=".SensorListActivity"
+            android:label="@string/title_activity_sensor_list" >
+        </activity>
     </application>
 
 </manifest>
