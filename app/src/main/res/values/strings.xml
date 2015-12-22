@@ -15,4 +15,8 @@
     <string name="title_activity_video_player">VideoPlayerActivity</string>
     <string name="title_activity_gesture">GestureActivity</string>
     <string name="title_activity_sensor_list">SensorListActivity</string>
+    <string name="title_activity_color_list_view">ColorListView</string>
+    <string name="title_activity_read_sensor_data">ReadSensorDataActivity</string>
+    <string name="title_activity_shared_preference">SharedPreferenceActivity</string>
+    <string name="title_activity_shake">ShakeActivity</string>
 </resources>

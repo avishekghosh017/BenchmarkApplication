@@ -134,6 +134,24 @@
             android:name=".SensorListActivity"
             android:label="@string/title_activity_sensor_list" >
         </activity>
+        <activity
+            android:name=".ColorListView"
+            android:label="@string/title_activity_color_list_view" >
+        </activity>
+        <activity
+            android:name=".ReadSensorDataActivity"
+            android:label="@string/title_activity_read_sensor_data" >
+        </activity>
+        <activity android:name=".CompassActivity" >
+        </activity>
+        <activity
+            android:name=".SharedPreferenceActivity"
+            android:label="@string/title_activity_shared_preference" >
+        </activity>
+        <activity
+            android:name=".ShakeActivity"
+            android:label="@string/title_activity_shake" >
+        </activity>
     </application>
 
 </manifest>

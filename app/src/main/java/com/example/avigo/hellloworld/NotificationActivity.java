@@ -16,6 +16,7 @@ import android.support.v7.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -102,6 +103,10 @@ public class NotificationActivity extends AppCompatActivity {
     private void playing() {
         MediaPlayer mp= MediaPlayer.create(getBaseContext(), R.raw.mirrors);
         mp.setLooping(false);
-        mp.start();
+        if(mp.isPlaying()){
+            Toast.makeText(getBaseContext(), mp.getDuration(), Toast.LENGTH_LONG).show();
+        }else{
+            mp.start();
+        }
     }
 }

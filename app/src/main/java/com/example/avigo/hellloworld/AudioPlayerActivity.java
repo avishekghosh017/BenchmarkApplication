@@ -19,22 +19,18 @@ public class AudioPlayerActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
 
     public void playAudio(View view){
-        try{
-            if(audioFilePath != null){
-                mediaPlayer = new MediaPlayer();
-                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                try {
-                    mediaPlayer.setDataSource(audioFilePath);
-                    mediaPlayer.prepare();
-                    mediaPlayer.start();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                Toast.makeText(this, "Select Audio File First !!", Toast.LENGTH_LONG).show();
+        if(audioFilePath != null){
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            try {
+                mediaPlayer.setDataSource(audioFilePath);
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        }catch (Exception e){
-            e.printStackTrace();
+        } else {
+            Toast.makeText(this, "Select Audio File First !!", Toast.LENGTH_LONG).show();
         }
     }
 

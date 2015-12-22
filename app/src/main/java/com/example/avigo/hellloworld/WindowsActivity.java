@@ -95,6 +95,22 @@ public class WindowsActivity extends AppCompatActivity {
                 Intent sensorIntent= new Intent(getBaseContext(),SensorListActivity.class);
                 startActivity(sensorIntent);
                 break;
+            case R.id.ibSensorData:
+                Intent sensorDataIntent= new Intent(getBaseContext(),ReadSensorDataActivity.class);
+                startActivity(sensorDataIntent);
+                break;
+            case R.id.ibCompass:
+                Intent compassIntent= new Intent(getBaseContext(),CompassActivity.class);
+                startActivity(compassIntent);
+                break;
+            case R.id.ibSharedPref:
+                Intent sharedIntent= new Intent(getBaseContext(),SharedPreferenceActivity.class);
+                startActivity(sharedIntent);
+                break;
+            case R.id.ibShakePlay:
+                Intent shakeIntent= new Intent(getBaseContext(),ShakeActivity.class);
+                startActivity(shakeIntent);
+                break;
         }
     }
 
